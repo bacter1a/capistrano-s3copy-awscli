@@ -6,10 +6,12 @@ capistrano-s3-copy is a revised implementation of the ideas in Bill Kirtleys cap
 Part of my revising've simply to use the aws-cli.
 
 aws-cli supports 
+
 * Environment variables
 * Config file
 * IAM Role
-*but this gem don't support Config file.*
+
+*But this gem don't support Config file.*
 
 This gem use Capistrano's own code to package the tarball, but instead of deploying it to each
 machine, we deploy it to a configured S3 bucket (using aws-cli provided by the https://github.com/aws/aws-cli),
