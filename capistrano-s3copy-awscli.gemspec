@@ -13,7 +13,7 @@ into S3, for both pushed deployments and pulled auto-scaling.
 Modified to use aws-cli(https://github.com/aws/aws-cli) from s3cmd.
 The original source is Capistrano-S3-Copy(http://github.com/richie/capistrano-s3-copy)}
   gem.summary       = %q{Capistrano deployment strategy that transfers the release on S3}
-  gem.homepage      = "https://github.com/bacter1a/capistrano-s3copy-awscli.git"
+  gem.homepage      = "https://github.com/bacter1a/capistrano-s3copy-awscli"
   gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($\)
