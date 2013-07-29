@@ -1,6 +1,6 @@
 # Capistrano::S3copy::Awscli
 
-This is a revised implementation of the ideas in Bill Richie McMahon capistrano-s3-copy gem.
+This is a revised implementation of the ideas in Bill Richie McMahon capistrano-s3-copy gem.   
 capistrano-s3-copy is a revised implementation of the ideas in Bill Kirtleys capistrano-s3 gem.
 
 Part of my revising've simply to use the aws-cli.
