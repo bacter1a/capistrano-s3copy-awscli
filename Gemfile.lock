@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capistrano-s3copy-awscli (0.0.2)
+    capistrano-s3copy-awscli (0.0.3)
       capistrano (>= 2.12.0)
 
 GEM
