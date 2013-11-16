@@ -21,7 +21,5 @@ The original source is Capistrano-S3-Copy(http://github.com/richie/capistrano-s3
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  #gem.add_development_dependency "bundler", "~> 1.3"
-  #gem.add_development_dependency "rake"
-  gem.add_dependency 'capistrano', ">= 2.12.0"
+  gem.add_runtime_dependency 'capistrano', '~> 2.12', '< 3.0'
 end
