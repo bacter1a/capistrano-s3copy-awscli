@@ -22,6 +22,22 @@ module Capistrano
           raise Capistrano::Error, "Missing configuration[:aws_releases_bucket]" if @bucket_name.nil?
         end
 
+        def deploy!
+          logger.info "running :s3_copy strategy"
+
+          copy_cache ? run_copy_cache_strategy : run_copy_strategy
+
+          set(:deploy_destination) { "#{destination}" }
+
+          configuration.trigger('deploy:prepared')
+
+          create_revision_file
+          compress_repository
+          distribute!
+        ensure
+          rollback_changes
+        end
+
         def check!
           super.check do |d|
             d.local.command("aws")

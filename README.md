@@ -63,3 +63,14 @@ An alternative ERB script can be configured like this:
 or reading file directly:
 
     set(:aws_install_script) { File.read("deploy/templates/aws_install.sh.erb") }
+
+Callback triggers to add your own steps within deployments, eg. merge production configs:
+
+    task :prepare do
+        destination = fetch(:deploy_destination)
+        raise Capistrano::Error, "Deploy destination is not defined" if destination.nil? || destination.empty?
+
+        # do what ever you need 
+    end
+
+    on 'deploy:prepared', 'prepare'
